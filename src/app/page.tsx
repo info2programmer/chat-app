@@ -1,8 +1,12 @@
+import Button from "@/components/ui/Button";
+
 export default function Home() {
   return (
     <>
-      <div>
-        <h1 className="text-center text-cyan-700 text-lg">Hello World</h1>
+      <div className="text-center m-2 ">
+        <Button isLoadading={false} className="rounded-full ">
+          Check Button
+        </Button>
       </div>
     </>
   );
