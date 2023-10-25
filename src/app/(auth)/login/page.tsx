@@ -3,7 +3,7 @@ import Image from "next/image";
 import { FC, useState } from "react";
 import IzifisoLogo from "../../../../public/logo.png";
 import Button from "@/components/ui/Button";
-import { signIn } from "next-auth/react";
+import { signIn, signOut } from "next-auth/react";
 import toast from "react-hot-toast";
 
 interface pageProps {}
@@ -15,6 +15,7 @@ const page: FC<pageProps> = ({}) => {
   async function loginWithGoogle() {
     setLoading(true);
     try {
+      // await signOut();
       await signIn("google");
     } catch (error) {
       toast.error("Someting went wrong with your login");
