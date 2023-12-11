@@ -36,7 +36,7 @@ const page: FC = async ({}) => {
       <div className="flex flex-col gap-4">
         <FriendRequests
           incomingFriendRequests={incomingFriendRequest}
-          sessionId="hello"
+          sessionId={session.user.id}
         />
       </div>
     </main>
